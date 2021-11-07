@@ -22,7 +22,9 @@ javascript: (function () {
     xhr.send();
   };
 
-  const nodeList = document.querySelectorAll('.rtd>a[href^="/"]');
+  const a = document.querySelectorAll('#master>a[href^="/"]');
+  const b = document.querySelectorAll('.rtd>a[href^="/"]');
+  const nodeList = [...a, ...b];
   for (let i = 0; i < nodeList.length; i += 2) {
     const href = nodeList[i].href;
     const filename = href.split("/").slice(-1)[0];
