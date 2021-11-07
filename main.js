@@ -1,4 +1,4 @@
-javascript: (function () {
+javascript: (async function () {
   "use strict";
 
   const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -29,6 +29,6 @@ javascript: (function () {
     const href = nodeList[i].href;
     const filename = href.split("/").slice(-1)[0];
     downloadFromUrlAutomatically(href, filename);
-    sleep(1000);
+    await sleep(250);
   }
 })();
