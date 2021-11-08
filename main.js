@@ -32,6 +32,6 @@ javascript: (async function () {
     const href = node.href;
     const filename = href.split("/").slice(-1)[0];
     downloadFromUrlAutomatically(href, filename);
-    await sleep(250);
+    await sleep(1000);
   }
 })();
