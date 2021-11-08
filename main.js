@@ -26,7 +26,10 @@ javascript: (async function () {
   const b = document.querySelectorAll('.rtd>a[href^="/"]');
   const nodeList = [...a, ...b];
   for (let i = 0; i < nodeList.length; i += 2) {
-    const href = nodeList[i].href;
+    const node = nodeList[i];
+    if (node.getBoundingClientRect().y < 0) continue;
+
+    const href = node.href;
     const filename = href.split("/").slice(-1)[0];
     downloadFromUrlAutomatically(href, filename);
     await sleep(250);
