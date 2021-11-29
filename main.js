@@ -30,7 +30,7 @@ javascript: (async function () {
     if (node.getBoundingClientRect().y < 0) continue;
 
     const href = node.href;
-    const filename = href.split("/").slice(-1)[0];
+    const filename = node.innerHTML.trim();
     downloadFromUrlAutomatically(href, filename);
     await sleep(1000);
   }
