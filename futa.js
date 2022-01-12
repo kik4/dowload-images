@@ -22,9 +22,10 @@ javascript: (async function () {
     xhr.send();
   };
 
-  const a = document.querySelectorAll('#master>a[href^="/"]');
-  const b = document.querySelectorAll('.rtd>a[href^="/"]');
-  const nodeList = [...a, ...b];
+  const thregaImages = document.querySelectorAll('#master>a[href^="/"]');
+  const logThregaImages = document.querySelectorAll('.thre>a[href^="/"]');
+  const resImages = document.querySelectorAll('.rtd>a[href^="/"]');
+  const nodeList = [...thregaImages, ...logThregaImages, ...resImages];
   for (let i = 0; i < nodeList.length; i += 2) {
     const node = nodeList[i];
     if (node.getBoundingClientRect().y < 0) continue;
