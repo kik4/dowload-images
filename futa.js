@@ -25,7 +25,15 @@ javascript: (async function () {
   const thregaImages = document.querySelectorAll('#master>a[href^="/"]');
   const logThregaImages = document.querySelectorAll('.thre>a[href^="/"]');
   const resImages = document.querySelectorAll('.rtd>a[href^="/"]');
-  const nodeList = [...thregaImages, ...logThregaImages, ...resImages];
+  const bucketThregaImages = document.querySelectorAll('.thre>a[href^="img/"]');
+  const bucketResImages = document.querySelectorAll('.rtd>a[href^="img/"]');
+  const nodeList = [
+    ...thregaImages,
+    ...logThregaImages,
+    ...resImages,
+    ...bucketThregaImages,
+    ...bucketResImages,
+  ];
   for (let i = 0; i < nodeList.length; i += 2) {
     const node = nodeList[i];
     if (node.getBoundingClientRect().y < 0) continue;
