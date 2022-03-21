@@ -35,4 +35,15 @@ javascript: (async function () {
     downloadFromUrlAutomatically(href, filename);
     await sleep(1000);
   }
+
+  const forestImages = document.querySelectorAll('#res_body a[href^="../../"]');
+  for (let i = 0; i < forestImages.length; i += 2) {
+    const node = forestImages[i];
+    if (node.getBoundingClientRect().y < 0) continue;
+
+    const href = node.href;
+    const filename = node.children[0].innerHTML.trim();
+    downloadFromUrlAutomatically(href, filename);
+    await sleep(1000);
+  }
 })();
