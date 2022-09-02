@@ -23,7 +23,9 @@ javascript: (async function () {
   };
 
   /* for forest */
-  document.querySelectorAll(".deleted").forEach((v) => v.remove());
+  document
+    .querySelectorAll(".deleted")
+    .forEach((v) => v.setAttribute("style", "display: table;"));
 
   const thregaImages = document.querySelectorAll('#master>a[href^="/"]');
   const logThregaImages = document.querySelectorAll('.thre>a[href^="/"]');
