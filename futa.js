@@ -22,6 +22,9 @@ javascript: (async function () {
     xhr.send();
   };
 
+  /* for forest */
+  document.querySelectorAll(".deleted").forEach((v) => v.remove());
+
   const thregaImages = document.querySelectorAll('#master>a[href^="/"]');
   const logThregaImages = document.querySelectorAll('.thre>a[href^="/"]');
   const resImages = document.querySelectorAll('.rtd>a[href^="/"]');
