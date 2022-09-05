@@ -23,9 +23,14 @@ javascript: (async function () {
   };
 
   /* for forest */
-  document
-    .querySelectorAll(".deleted")
-    .forEach((v) => v.setAttribute("style", "display: table;"));
+  const deleted = document.querySelectorAll(".deleted");
+  if (deleted.length) {
+    if (window.confirm("削除されたレスを削除しますか？")) {
+      deleted.forEach((v) => v.remove());
+    } else {
+      deleted.forEach((v) => v.setAttribute("style", "display: table;"));
+    }
+  }
 
   const thregaImages = document.querySelectorAll('#master>a[href^="/"]');
   const logThregaImages = document.querySelectorAll('.thre>a[href^="/"]');
