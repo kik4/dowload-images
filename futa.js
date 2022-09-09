@@ -31,6 +31,7 @@ javascript: (async function () {
       deleted.forEach((v) => v.setAttribute("style", "display: table;"));
     }
   }
+  document.querySelectorAll("blockquote>a").forEach((v) => v.remove());
 
   const thregaImages = document.querySelectorAll('#master>a[href^="/"]');
   const logThregaImages = document.querySelectorAll('.thre>a[href^="/"]');
