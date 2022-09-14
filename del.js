@@ -15,7 +15,7 @@ javascript: (async function () {
 
   /* main */
   const nodeList = [...document.querySelectorAll(".no_quote")];
-  console.log(nodeList.length);
+  console.log(nodeList.length, "レス");
 
   for (let i = 0; i < nodeList.length; i++) {
     const node = nodeList[i];
