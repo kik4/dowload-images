@@ -25,18 +25,4 @@ javascript: (async function () {
   if (!footer) alert("footerタグが見つかりませ年でした");
 
   footer.appendChild(a);
-  /*
-  const uri = atag.href;
-
-  const xhr = new XMLHttpRequest();
-  xhr.open("GET", uri);
-  xhr.responseType = "blob";
-  xhr.onloadend = () => {
-    if (xhr.status !== 200) {
-      return false;
-    }
-    window.navigator.msSaveOrOpenBlob(xhr.response, filename);
-  };
-  xhr.send();
-  */
 })();
