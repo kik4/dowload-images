@@ -8,7 +8,7 @@ javascript: (async function () {
 
   let name = nametag.children[0].children[0].textContent;
   if (!name) alert("nameが見つかりませんでした");
-  const server = nametag.children[0].children[1].textContent;
+  const server = nametag.children[0].children[1]?.textContent ?? "";
   name += server;
 
   const filename = `${name}${document.location.pathname.replaceAll(
